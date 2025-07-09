@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="TableJS.js" defer></script>
+    <title>
+        hiiiii
+    </title>
+    <link rel="stylesheet" href="TableinCSS.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+            <h1>Calander</h1>
+            <table id="calendar-table">
+                 <tr>
+                    <th colspan="7">
+                        <h2>2024</h2>
+                        <select name="Month" id="Month">
+                        <option value="january">JANUARY</option>
+                        <option value="february">FEBRUARY</option>
+                        <option value="march">MARCH</option>
+                        <option value="april">APRIL</option>
+                        <option value="may">MAY</option>
+                        <option value="june">JUNE</option>
+                        <option value="july">JULY</option>
+                        <option value="august">AUGUST</option>
+                        <option value="september">SEPTEMBER</option>
+                        <option value="october">OCTOBER</option>
+                        <option value="november">NOVEMBER</option>
+                        <option value="december">DECEMBER</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                <td class="dates">Mon</td>
+                <td class="dates">Tue</td>
+                <td class="dates">Wed</td>
+                <td class="dates">Thu</td>
+                <td class="dates">Fri</td>
+                <td class="dates">Sat</td>
+                <td class="dates">Sun</td>
+                </tr>
+                <tbody id="calendar-body">
+                </tbody>
+            </table>
+                        </div>
+            <div class="column right">
+                <h1>Planner</h1>
+                <table>
+                    <th>
+                        schedule
+                    </th>
+                    <tr>
+                        <td class="add">
+                            ...add to your schedule...
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                </table>
+              
+        </div>
+
+</body>
+</html>
