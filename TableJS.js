@@ -1,10 +1,8 @@
+//calander
+
 function monthSelector(){
     var month = document.getElementById("Month").value;
-};
-
-/*function findMonth(){
-
-};*/
+}
 
 window.onload = function ()
 {
@@ -78,14 +76,42 @@ window.onload = function ()
                 else if (day <=daysInMonth)
                 {
                     cell.textContent = day;
-                    day++
-                }
+                    cell.classList.add("dayClick");
+                    cell.dataset.day = day;
+                    const selectedDay = day;
+                    cell.addEventListener("click",function()
+                    {
+                        document.querySelectorAll(".dayClick").forEach(
+                            c=>c.classList.remove("selected-date"));
+                            cell.classList.add("selected-date");
+                            showPlannerDates(month,selectedDay);
+                });
+                day++;
+            }
                 else{
                     cell.textContent = "";
                 }
                 row.appendChild(cell);
             }
             calendarBody.appendChild(row);
+        }
+    };
+    document.getElementById("Month").addEventListener("change", function (){location.reload();
+    });
+
+
+//planner
+function showPlannerDates(month,day)
+{
+    const key = `${month}-${day}`;
+    const savedTasks = JSON.parse(localStorage.getItem(key))||[];
+    const inputs = document.querySelectorAll("input[name='planner']");
+    inputs.forEach((input, index) =>{
+        input.value = savedTasks[index]|| "";
+        input.oninput = () =>{
+            const updatedTasks = Array.from(inputs).map(input =>input.value);
+            localStorage.setItem(key,JSON.stringify(updatedTasks));
         };
-    }
-document.getElementById("Month").addEventListener("change", function (){location.reload();});
+    });
+    document.getElementById("selected-date-display").textContent=`${month} ${day}`;
+}
