@@ -1,0 +1,102 @@
+body{
+   background-color: rgb(208, 233, 235);
+    padding-left: 1in ;
+}
+th {
+    background-color:rgb(235, 252, 235) ;
+    border:none;
+}
+.dates{
+    text-align: center;
+    background-color: antiquewhite;
+}
+.dates:hover{
+    background-color: antiquewhite ;
+    border-color: rgb(43, 3, 3);
+}
+td,tr{
+    background-color: rgb(250, 247, 216);
+    border: 1px;
+    border-color: black;
+    height: 1in;
+    width: 0.8in;
+    border-radius: 10px;
+    }
+
+td:hover{
+    background-color: #ffdc9559;
+    border-radius:0px ;
+}
+ .column {
+  float: left;
+  width: 50%;
+}
+
+h1{
+    text-align: center;
+    text-decoration-color: rgb(103, 103, 126);
+    font-family:cursive;
+    text-decoration: underline overline;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+table{
+   
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    border-collapse:separate ;
+    overflow: hidden;
+
+}
+.add{
+    font-size: medium;
+    font-style: italic;
+    text-align: justify;
+    padding-left: 1in;
+    color: rgba(14, 56, 90, 0.5);
+    font-size: large;
+    background-color: antiquewhite;
+}
+.add:hover{
+    background-color:antiquewhite;
+}
+.dayClick {
+    cursor: pointer;
+    background-color: #fffac9;
+    transition: background-color 0.3s ease;
+}
+.dayClick:active {
+    background-color: #d6cb85;
+}
+select{
+    font-size: large;
+    background-color:#fef8c5;
+    border-radius: 5px;
+    border: none;
+}
+input{
+    text-transform: capitalize;
+    height: 90%;
+    width: 90%;
+    background-color:rgb(235, 252, 235);
+    border: none;
+    border-radius:40px;
+    font-size: x-large;
+    font-style:italic;
+    font-family: 'caveat', cursive ;
+}
+input:hover{
+    background-color:rgba(255, 255, 255, 0.808);
+}
+.selected-date {
+    background-color: #ffdb95;
+}
+.selected-date-display{
+    text-transform: capitalize;
+}
